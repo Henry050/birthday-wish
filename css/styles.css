@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(31, 28, 28);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: beige;
+    color: black;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+nav ul {
+    display: flex;
+    color: black;
+    gap: 20px;
+}
+ ul li {
+    display: flex;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover{
+    color: rgb(39, 36, 36);
+    transform: scale(1.1);
+}
+
+h1{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+h3{
+    font-size: 35px;
+}
+
+.birthday{
+    display: flex;
+    gap: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    font-family:  Georgia, Times, 'Times New Roman', serif;
+    height: 70vh;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.birth-d{
+    font-size: 20px;
+    font-weight: 400px;
+    line-height: 40px;
+    position: relative;
+    top: 3px;
+}
+.birth-img{
+    height: 350px;
+    border-radius: 20px;
+    transition: all 0.4s ease-in;
+}
+.birth-img:hover{
+    transform: scale(0.9);
+}
+.birthday .bold{
+    display: block;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.birth-wishes{
+    margin: 5px auto;
+}
+
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 5px;
+    
+}
+.wishes{
+    width: 200px;
+    height: 200px;
+    background-color: #8f7c30;
+    padding: 10px;
+    color: #fff;
+    bottom: 5px;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.wishes:hover{
+    cursor: pointer;
+    background-color: #3d3825;
+    transform: scale(1.1);
+}
+.decoration{
+    background-color: rgb(41, 38, 29);   
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.photo-news{
+    background-color: #000;
+    font-size: 25px;
+    color: #fff;
+    margin:  auto;
+}
+.images-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container{
+    object-fit: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+    width: 100%;
+    margin: 5px;
+}
+.img-container img{
+    object-fit: cover;
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+hr{
+    color: #423b1d;
+    border: 3px solid #1f1d17;
+}
+.foot{
+    border: 3px solid #201f15;
+}
+
+footer{
+    background-color: beige;
+    color: black;
+    padding: 30px;
+    font-size: 25px;
+}
+footer p > a{
+    color: black;
+    font-size: 20px;
+}
+footer p > a:hover{
+    cursor: pointer;
+    color: #3f3b2c;
+    font-size: 26px;
+}
+
+@media screen and (max-width: 800px){
+
+    body{
+        width: fit-content;
+
+    }
+    .home-birth{
+        grid-template-columns: auto auto auto;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header{
+        justify-content: space-around;
+    }
+
+    h1{
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .flex-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: max-content(1fr);
+        height: fit-content;
+    }
+
+    a{
+        font-size: 16px;
+    }
+
+    .wishes{        
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 3px;
+        column-gap: 5px;
+    }
+    .birthday{
+        flex-wrap: wrap;
+        font-size: 16px;
+        height: 60vh;
+    }
+    .birth-d{
+        font-size: 18px;
+    }
+
+    .birth-img{
+        height: 200px;
+        flex-wrap: wrap;
+    }
+
+    footer{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .img-container{
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width:400) {
+    h1{
+        width: 80%;
+        font-size: 16px;
+    }
+
+    header{
+        justify-content: space-around;
+    }
+
+    .flex-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: max-content(1fr);
+        height: fit-content;
+    }
+
+    .images-container{
+        grid-template-columns: 1fr 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wishes{        
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 3px;
+        column-gap: 5px;
+        font-size: 18px;
+    }
+    .birthday{
+        flex-wrap: wrap;
+        font-size: 16px;
+        height: 60vh;
+    }
+    .birth-d{
+        font-size: 18px;
+    }
+
+    .birth-img{
+        height: 300px;
+        flex-wrap: wrap;
+    }
+
+    footer p > a{
+        font-size: 16px;
+    }
+
+}
